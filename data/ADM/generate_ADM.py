@@ -23,12 +23,12 @@ def create_data(fname='data',ftest='test',ndata=10000,ntest=500, create_test=Fal
       data_x = generate_meta_material(ntest)
       data_y = AMD_resim_body(data_x, "../../src/simulators/data4yang/")
       pd.DataFrame(data_x).to_csv(f'./{ftest}_x.csv',index=False, header=False)
-      pd.DataFrame(data_y).to_csv(f'./{ftset}_y.csv',index=False, header=False)
+      pd.DataFrame(data_y).to_csv(f'./{ftest}_y.csv',index=False, header=False)
 
 if __name__ == '__main__':
   create_data(create_test=True)
   
   # for medium surrogator model
-  create_data(fname='data-mid',ndata=400,create_test=False)
+  #create_data(fname='data-mid',ndata=40000,create_test=False)
 
 
