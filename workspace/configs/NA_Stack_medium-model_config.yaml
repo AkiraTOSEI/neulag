@@ -1,0 +1,48 @@
+general:
+  data_dir: data/Stack
+  task: Stack
+  exp_name: test
+  master_dir: /home/afujii/awesome_physics_project/
+  skip_done_exp: false
+output_dirs: {}
+simulator_files_dir:
+  ADM: src/simulators/data4yang/
+  Stack: src/simulators/stack
+fw_model:
+  model_rewrite: false
+  model_name: medium
+fw_train:
+  batch_size: 32
+  specify_train_data: data-mid
+  lr: 0.001
+  eps: 1e-5
+  optimizer: Adam
+  decay_factor: 0.25
+  decay_patience: 20
+  grad_clip: 0.5
+  decay_method: ReduceLROnPlateau
+  max_epochs: 300
+inverse_problem:
+  target_id: 0
+  num_T_samples: 200
+  num_eval_sample_list: [2048]
+  input_boundary:
+    type: No_Data
+    ConstrainNMId: No_data
+    ConstrainEqId: No_data
+    input_boundary: No_data
+    margin: 0.0
+    target_val: 0.0
+  method: NA
+  method_parameters:
+    constrain_loss_coef: 1.0
+    BL_coef: 0.1
+    iv_batch_size: 2048
+    iv_lr: 0.01
+    iv_decay_method: ReduceLROnPlateau
+    iv_lr_decay_factor: 0.2
+    iv_lr_decay_patience: 30
+    eps: 1e-8
+    grad_clip: 1.0
+    optimization_mode: single_target_for_multi_solution
+    optimization_steps: 300

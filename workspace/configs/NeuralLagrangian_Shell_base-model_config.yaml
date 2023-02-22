@@ -1,0 +1,58 @@
+general:
+  data_dir: data/Shell
+  exp_name: test
+  master_dir: /home/afujii/awesome_physics_project/
+  skip_done_exp: false
+  task: Shell
+output_dirs: {}
+simulator_files_dir:
+  ADM: src/simulators/data4yang/
+  Stack: src/simulators/stack
+fw_model:
+  model_name: base
+  model_rewrite: false
+fw_train:
+  batch_size: 1024
+  decay_factor: 0.2
+  decay_method: ReduceLROnPlateau
+  decay_patience: 10
+  eps: 1e-5
+  lr: 0.01
+  max_epochs: 300
+  optimizer: Adam
+inverse_problem:
+  num_T_samples: 200
+  num_eval_sample_list: [2048]
+  target_id: 0
+  input_boundary:
+    ConstrainEqId: No_data
+    ConstrainNMId: No_data
+    input_boundary: No_data
+    margin: 0.0
+    target_val: 0.0
+    type: No_data
+  method: NeuralLagrangian
+  method_parameters:
+    BL_coef: 0.1
+    constrain_loss_coef: 1.0
+    eps: 1e-8
+    grad_clip: 1.0
+    iv_batch_size: 2048
+    iv_decay_method: ReduceLROnPlateau
+    iv_lr: 0.01
+    iv_lr_decay_factor: 0.2
+    iv_lr_decay_patience: 200
+    optimization_mode: single_target_for_multi_solution
+    optimization_steps: 1200
+  proj:
+    input_dim: 128
+    mid_layer_dim: 256
+    momentum_mu: 0.9
+    noise_injection: true
+    noise_scale: 0.001
+    num_branch: 2048
+    num_leanable_input: 8192
+    num_mid_layers: 2
+    reduction_schedule: [4,64,1,1]
+    use_candidate_selection: true
+

@@ -1,0 +1,31 @@
+fw_model: {}
+general:
+  data_dir: /home/afujii/awesome_physics_project/data/Deng
+  exp_name: test
+  task: Deng
+inverse_problem:
+  eval_batch_size: 300
+  input_boundary: 3.0
+  method: NA
+  method_parameters:
+    BL_coef: 1.0
+    lr: 0.01
+    lr_decay_factor: 0.8
+    lr_decay_patience: 10
+    optimization_mode: single_target
+    optimization_steps: 300
+  proj:
+    bn_use: true
+    input_dim: 20
+    mid_layer_dim: 20
+    num_mid_layers: 5
+  target_id: 0
+output_dirs: {}
+simulator_files_dir:
+  chen: /home/afujii/awesome_physics_project/data/Chen
+train:
+  batch_size: 1024
+  lr: 0.001
+  lr_decay_factor: 0.8
+  lr_decay_patience: 10
+  max_epochs: 300

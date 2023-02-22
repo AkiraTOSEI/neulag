@@ -1,0 +1,25 @@
+general:
+  data_dir: /home/ec2-user/SageMaker/iclr_awesome_project/Data/Yang
+  exp_name: test
+  task: Peurifoy
+inverse_problem:
+  eval_batch_size: 500
+  method: NA
+  method_parameters:
+    BL_coef: 1.0
+    lr: 0.01
+    lr_decay_factor: 0.8
+    lr_decay_patience: 10
+    optimization_mode: single_target
+    optimization_steps: 300
+  target_id: 0
+network: {}
+output_dirs: {}
+simulator_files_dir:
+  chen: /home/jovyan/iclr_awesome_project/Data/Chen
+train:
+  batch_size: 1024
+  lr: 0.001
+  lr_decay_factor: 0.8
+  lr_decay_patience: 10
+  max_epochs: 300

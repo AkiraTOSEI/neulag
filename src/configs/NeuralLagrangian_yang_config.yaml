@@ -1,0 +1,49 @@
+fw_model:
+  num_mid_layers: 15
+general:
+  data_dir: /home/ec2-user/SageMaker/iclr_awesome_project/Data/Deng
+  exp_name: test
+  task: Deng
+inverse_problem:
+  eval_batch_size: 1024
+  input_boundary:
+    x0_max: null
+    x0_min: null
+    x1_max: null
+    x1_min: null
+    x2_max: null
+    x2_min: null
+    x3_max: null
+    x3_min: null
+    x4_max: null
+    x4_min: null
+    x5_max: null
+    x5_min: null
+    x6_max: null
+    x6_min: null
+    x7_max: null
+    x7_min: null
+  method: NeuralLagrangian
+  method_parameters:
+    BL_coef: 1.0
+    lr: 0.01
+    lr_decay_factor: 0.8
+    lr_decay_patience: 10
+    margin: 0.001
+    optimization_mode: single_target_for_multi_solution
+    optimization_steps: 300
+  proj:
+    bn_use: true
+    input_dim: 20
+    mid_layer_dim: 20
+    num_mid_layers: 5
+  target_id: 0
+output_dirs: {}
+simulator_files_dir:
+  chen: /home/ec2-user/SageMaker/iclr_awesome_project/Data/Chen
+train:
+  batch_size: 1024
+  lr: 0.001
+  lr_decay_factor: 0.8
+  lr_decay_patience: 10
+  max_epochs: 300
