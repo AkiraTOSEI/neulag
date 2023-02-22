@@ -239,4 +239,4 @@ if __name__ == "__main__":
     create_data(500,fname='test')
     
     # for medium surrogator model
-    #create_data(50000*4,fname='data-mid')
+    create_data(500,fname='data-mid')

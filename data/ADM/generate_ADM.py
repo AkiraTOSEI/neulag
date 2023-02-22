@@ -26,9 +26,9 @@ def create_data(fname='data',ftest='test',ndata=10000,ntest=500, create_test=Fal
       pd.DataFrame(data_y).to_csv(f'./{ftset}_y.csv',index=False, header=False)
 
 if __name__ == '__main__':
-  creat_x_data(create_test=True)
+  create_data(create_test=True)
   
   # for medium surrogator model
-  #creat_x_data(fname='data-mid',ndata=40000,create_test=False)
+  create_data(fname='data-mid',ndata=400,create_test=False)
 
 

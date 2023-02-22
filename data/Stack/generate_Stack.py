@@ -604,8 +604,8 @@ if __name__ == '__main__':
     print('The generation process of generating {} takes {}s'.format(ndata, time.time() - start))
     
     # for medium surrogator model
-    #generate(ndata*4, random_seed1, random_seed2,fname= 'data-mid')
-    #print('The generation process of generating {} takes {}s'.format(ndata, time.time() - start))
+    generate(1000, random_seed1, random_seed2,fname= 'data-mid')
+    print('The generation process of generating {} takes {}s'.format(ndata, time.time() - start))
     
     
     
