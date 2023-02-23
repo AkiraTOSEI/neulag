@@ -9,11 +9,17 @@ This repository is the implementation of [Improve Solution Quality for Inverse P
 ```
     ├── .github/           <- Settings for GitHub.
     │
+    ├── images/            <- image files for the README.md
+    │
     ├── data/              <- Datasets.
     │
     ├── models/            <- Pretrained surrogate models.
     │
     ├── outputs/           <- Outputs.
+    │
+    ├── workspace/         <- workspace and a script.
+    │
+    ├── notebook/          <- a notebook for a demonstration
     │
     ├── src/               <- Source code. This sould be Python module.
     │
