@@ -156,12 +156,11 @@ def baseline_test(
 
 
 if __name__ == "__main__":
-    task = "Shell"
-
-    for model_name in ["base"]:
-        baseline_test(
-            task=task,
-            model_name=model_name,
-            test_run_mode=False,
-            only_no_const=True,
-        )
+    task = "Stack" # "ADM" or "Stack" or "Shell"
+    model_name = "base" # "base" or "small" or "medium"
+    
+    baseline_test(
+        task=task,
+        model_name=model_name,
+        test_run_mode=False,
+    )

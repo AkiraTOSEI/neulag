@@ -95,14 +95,13 @@ You can choose a task or a surrogate model by modifying `task` and `model_name` 
 
 ```python
 if __name__ == "__main__":
-    task = "Shell" # "ADM" or "Stack" or "Shell"
+    task = "Stack" # "ADM" or "Stack" or "Shell"
     model_name = "base" # "base" or "small" or "medium"
 
     baseline_test(
         task=task,
         model_name=model_name,
         test_run_mode=False,
-        only_no_const=True,
     )   
 
 ```
