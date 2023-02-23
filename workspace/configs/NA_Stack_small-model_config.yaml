@@ -2,7 +2,7 @@ general:
   data_dir: data/Stack
   task: Stack
   exp_name: test
-  master_dir: /home/afujii/awesome_physics_project/
+  master_dir: /your_dir_path/improve_solution_quality_for_inverse_problems/
   skip_done_exp: false
 fw_model:
   model_rewrite: false
