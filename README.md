@@ -23,7 +23,9 @@ This repository is the implementation of [Improve Solution Quality for Inverse P
     │
     ├── src/               <- Source code. This sould be Python module.
     │
-    └── README.md          <- The top-level README for developers.
+    ├── LICENSE            <- MIT Lisense
+    │
+    └── README.md          <-  a project description
 
 ```
 
