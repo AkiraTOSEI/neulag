@@ -1,23 +1,24 @@
 general:
-  data_dir: data/Shell
+  data_dir: data/ADM
   exp_name: test
   master_dir: /your_dir_path/improve_solution_quality_for_inverse_problems/
   skip_done_exp: false
-  task: Shell
+  task: ADM
 output_dirs: {}
 simulator_files_dir:
   ADM: src/simulators/data4yang/
   Stack: src/simulators/stack
 fw_model:
   model_rewrite: false
-  model_name: small
+  model_name: medium
 fw_train:
   batch_size: 64
-  lr: 0.001
+  lr: 0.01
   eps: 1e-5
   optimizer: Adam
   decay_factor: 0.2
   decay_patience: 10
+  grad_clip: 0.5
   decay_method: ReduceLROnPlateau
   max_epochs: 300
 inverse_problem:
@@ -28,10 +29,9 @@ inverse_problem:
     ConstrainEqId: No_data
     ConstrainNMId: No_data
     input_boundary: No_data
-    margin: 0.0
     target_val: 0.0
-    type: No_Data
-  method: NA
+    type: No_data
+  method: NeuralLagrangian
   method_parameters:
     BL_coef: 0.1
     constrain_loss_coef: 1.0
@@ -41,6 +41,17 @@ inverse_problem:
     iv_decay_method: ReduceLROnPlateau
     iv_lr: 0.01
     iv_lr_decay_factor: 0.2
-    iv_lr_decay_patience: 200
+    iv_lr_decay_patience: 30
     optimization_mode: single_target_for_multi_solution
-    optimization_steps: 1200
+    optimization_steps: 300
+  proj:
+    input_dim: 128
+    mid_layer_dim: 256
+    momentum_mu: 0.9
+    noise_injection: true
+    noise_scale: 0.001
+    num_branch: 2048
+    num_leanable_input: 8192
+    num_mid_layers: 2
+    reduction_schedule: [4,64,1]
+    use_candidate_selection: true

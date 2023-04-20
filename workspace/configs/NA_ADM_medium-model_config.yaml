@@ -10,7 +10,7 @@ simulator_files_dir:
   Stack: src/simulators/stack
 fw_model:
   model_rewrite: false
-  model_name: small
+  model_name: medium
 fw_train:
   batch_size: 64
   lr: 0.01
@@ -30,8 +30,8 @@ inverse_problem:
     ConstrainNMId: No_data
     input_boundary: No_data
     target_val: 0.0
-    type: No_data
-  method: NeuralLagrangian
+    type: No_Data
+  method: NA
   method_parameters:
     BL_coef: 0.1
     constrain_loss_coef: 1.0
@@ -44,14 +44,3 @@ inverse_problem:
     iv_lr_decay_patience: 30
     optimization_mode: single_target_for_multi_solution
     optimization_steps: 300
-  proj:
-    input_dim: 128
-    mid_layer_dim: 256
-    momentum_mu: 0.9
-    noise_injection: true
-    noise_scale: 0.001
-    num_branch: 2048
-    num_leanable_input: 8192
-    num_mid_layers: 2
-    reduction_schedule: [4,64,1]
-    use_candidate_selection: true
