@@ -1,6 +1,6 @@
-# Improve Solution Quality for Inverse Problems by Using Highly Accurate Surrogate Simulator and Focusing on Promising Candidates
+# Enhancing Inverse Problem Solutions with Accurate Surrogate Simulators and Promising Candidates
 
-This repository is the implementation of [Improve Solution Quality for Inverse Problems by Using Highly Accurate Surrogate Simulator and Focusing on Promising Candidates](???).
+This repository is the implementation of [Enhancing Inverse Problem Solutions with Accurate Surrogate Simulators and Promising Candidates](???).
 
 
 
