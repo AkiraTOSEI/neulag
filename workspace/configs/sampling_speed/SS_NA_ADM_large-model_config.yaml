@@ -13,7 +13,7 @@ simulator_files_dir:
   Stack: src/simulators/stack
 fw_model:
   model_rewrite: false
-  model_name: medium
+  model_name: large
 fw_train:
   batch_size: 32
   lr: 0.01
