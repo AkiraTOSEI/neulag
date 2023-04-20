@@ -44,8 +44,10 @@ surrogate simulator loss | 2.31e-6 | 3.67e-6 | 3.90e-7 | 7.11e-8|
 NA $L_{Resim}$ | 1.22e-6 | 1.28e-6 | 1.03e-7 |2.86e-8|
 Neural Lagrangian $L_{Resim}$ | - |1.27e-6|1.28e-7|1.27e-8|
 
-![](./images/accuracy_vs_inv.png)
+![](./images/accuracy_vs_inv_NA.png)
 
+
+![](./images/accuracy_vs_inv_neulag.png)
 
 We succeeded in reducing the re-simulation error of the previous method from 1/5 to 1/50 for the three AEM tasks of Stack, Shell, and ADM.
 
